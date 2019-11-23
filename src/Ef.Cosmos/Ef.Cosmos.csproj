@@ -9,11 +9,15 @@
     <Copyright>Copyright 2019</Copyright>
     <RepositoryType></RepositoryType>
     <PackageTags>cosmosdb, cosmos db, entity framework, ef cosmos db, azure, provider, repository, dbcontext, db context, microsoft, C#, csharp</PackageTags>
+    <Title>Ef.Cosmos : Yet another tooling (or wrapper) for Microsoft Azure Cosmos DB</Title>
     <Company />
     <PackageReleaseNotes>https://github.com/dapoulin/ef-cosmos/</PackageReleaseNotes>
     <Description>
       Simple classes / tools / wrappers to manipulate data on Microsoft Azure Cosmos DB
     </Description>
+    <Summary>Use Microsoft Azure CosmosDB in an easier way, with Entity Framework DBContext wrappers / tools / repositories.</Summary>
+    <PackageLicenseUrl>https://github.com/dapoulin/ef-cosmos/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>DaPoulin</Owners>
   </PropertyGroup>
 
   <ItemGroup>
