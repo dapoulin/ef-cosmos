@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ef.Cosmos" Version="1.0.3" />
+    <PackageReference Include="Ef.Cosmos" Version="1.0.5" />
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,14 @@
 name: 1.0$(rev:.r)
 
-trigger:
-  branches:
-    include:
-      - master 
-  paths:
-    exclude:
-      - README.md
-      - ci-ef-cosmos.yml
-      - cd-ef-cosmos.yml
+# trigger:
+#   branches:
+#     include:
+#       - master 
+#   paths:
+#     exclude:
+#       - README.md
+#       - ci-ef-cosmos.yml
+#       - cd-ef-cosmos.yml
 
 pool:
   vmImage: 'windows-latest'

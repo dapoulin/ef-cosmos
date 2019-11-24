@@ -10,7 +10,9 @@ namespace Ef.Cosmos.Samples.ConsoleAppDI
         static void Main(string[] args)
         {
             Startup.Init();
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Cosmos !");
+
+            Run().Wait();
         }
 
         static async Task Run()
