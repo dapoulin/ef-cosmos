@@ -23,10 +23,5 @@ namespace Ef.Cosmos
         public Task<TEntity> GetOne(Expression<Func<TEntity, bool>> predicate) => TargetDbSet.FirstOrDefaultAsync(predicate);
 
         public IQueryable<TEntity> List() => TargetDbSet;
-
-        IQueryable<TEntity> IReadonlyRepository<TEntity>.List()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
