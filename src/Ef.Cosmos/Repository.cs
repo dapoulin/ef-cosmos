@@ -26,9 +26,6 @@ namespace Ef.Cosmos
             TargetDbSet.Remove(entity);
         }
 
-        public Task Delete(TEntity entity)
-        {
-            return Task.Run(() => TargetDbSet.Remove(entity));
-        }
+        public Task Delete(TEntity entity) => Task.Run(() => TargetDbSet.Remove(entity));
     }
 }
