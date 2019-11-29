@@ -6,7 +6,7 @@ namespace Ef.Cosmos
 {
     public class Repository<TEntity> :
        ReadonlyRepository<TEntity>,
-       IRepository<TEntity> where TEntity : class
+       IRepository<TEntity> where TEntity : class, IEntity
     {
         public Repository(DbContext unitOfWork) : base(unitOfWork)
         {

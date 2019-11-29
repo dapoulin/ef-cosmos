@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ef.Cosmos
 {
     public class ReadonlyRepository<TEntity> :
-        IReadonlyRepository<TEntity> where TEntity : class
+        IReadonlyRepository<TEntity> where TEntity : class, IEntity
     {
         public DbContext Context { get; private set; }
         public DbSet<TEntity> TargetDbSet { get; private set; }
@@ -18,7 +18,7 @@ namespace Ef.Cosmos
             TargetDbSet = Context.Set<TEntity>();
         }
 
-        public virtual Task<TEntity> GetById(Guid id) => throw new NotImplementedException();
+        public virtual Task<TEntity> GetById(Guid id) => GetOne(e => e.EntityId == id);
 
         public Task<TEntity> GetOne(Expression<Func<TEntity, bool>> predicate) => TargetDbSet.FirstOrDefaultAsync(predicate);
 

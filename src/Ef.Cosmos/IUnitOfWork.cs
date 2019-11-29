@@ -7,8 +7,8 @@ namespace Ef.Cosmos
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<TEntity> GetRepository<TEntity>() where TEntity : class;
-        IReadonlyRepository<TEntity> GetReadonlyRepository<TEntity>() where TEntity : class;
+        IRepository<TEntity> GetRepository<TEntity>() where TEntity : class, IEntity;
+        IReadonlyRepository<TEntity> GetReadonlyRepository<TEntity>() where TEntity : class, IEntity;
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 

@@ -46,7 +46,7 @@ namespace Ef.Cosmos
             return Context.SaveChangesAsync();
         }
 
-        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : class
+        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : class, IEntity
         {
             if (repositories == null) repositories = new Dictionary<Type, object>();
 
@@ -55,7 +55,7 @@ namespace Ef.Cosmos
             return (IRepository<TEntity>)repositories[type];
         }
 
-        public IReadonlyRepository<TEntity> GetReadonlyRepository<TEntity>() where TEntity : class
+        public IReadonlyRepository<TEntity> GetReadonlyRepository<TEntity>() where TEntity : class, IEntity
         {
             if (readonlyRepositories == null) readonlyRepositories = new Dictionary<Type, object>();
 
