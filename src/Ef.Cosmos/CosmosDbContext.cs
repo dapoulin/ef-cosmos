@@ -33,6 +33,11 @@ namespace Ef.Cosmos
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            if(!string.IsNullOrEmpty(dbSettings.ContainerName))
+            {
+                modelBuilder.HasDefaultContainer(dbSettings.ContainerName);
+            }
         }
     }
 }

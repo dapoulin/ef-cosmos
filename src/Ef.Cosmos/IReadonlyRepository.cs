@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Ef.Cosmos
 {
-    public interface IReadonlyRepository<TEntity> where TEntity : class
+    public interface IReadonlyRepository<TEntity> where TEntity : class, IEntity
     {
         IQueryable<TEntity> List();
         Task<TEntity> GetById(Guid id);
